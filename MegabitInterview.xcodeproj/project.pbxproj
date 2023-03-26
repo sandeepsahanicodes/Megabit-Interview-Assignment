@@ -7,29 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A52BD9729CF633000B27503 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A52BD9629CF633000B27503 /* Student.swift */; };
 		5AB6AB1329CF359100ADC37C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6AB1229CF359100ADC37C /* AppDelegate.swift */; };
 		5AB6AB1529CF359100ADC37C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6AB1429CF359100ADC37C /* SceneDelegate.swift */; };
 		5AB6AB1A29CF359100ADC37C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AB6AB1829CF359100ADC37C /* Main.storyboard */; };
-		5AB6AB1D29CF359100ADC37C /* MegabitInterview.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6AB1B29CF359100ADC37C /* MegabitInterview.xcdatamodeld */; };
 		5AB6AB1F29CF359900ADC37C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AB6AB1E29CF359900ADC37C /* Assets.xcassets */; };
 		5AB6AB2229CF359900ADC37C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AB6AB2029CF359900ADC37C /* LaunchScreen.storyboard */; };
 		5AB6AB2B29CF39B600ADC37C /* StudentFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6AB2A29CF39B600ADC37C /* StudentFormViewController.swift */; };
 		5AB6AB2D29CF39D000ADC37C /* StudentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6AB2C29CF39D000ADC37C /* StudentListViewController.swift */; };
 		5AB6AB2F29CF3C2700ADC37C /* StudentListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6AB2E29CF3C2700ADC37C /* StudentListTableViewCell.swift */; };
+		5AB6AB3429CF5C0800ADC37C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6AB3329CF5C0800ADC37C /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A52BD9629CF633000B27503 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		5AB6AB0F29CF359100ADC37C /* MegabitInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MegabitInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AB6AB1229CF359100ADC37C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AB6AB1429CF359100ADC37C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5AB6AB1929CF359100ADC37C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5AB6AB1C29CF359100ADC37C /* MegabitInterview.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MegabitInterview.xcdatamodel; sourceTree = "<group>"; };
 		5AB6AB1E29CF359900ADC37C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5AB6AB2129CF359900ADC37C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5AB6AB2329CF359900ADC37C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AB6AB2A29CF39B600ADC37C /* StudentFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentFormViewController.swift; sourceTree = "<group>"; };
 		5AB6AB2C29CF39D000ADC37C /* StudentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListViewController.swift; sourceTree = "<group>"; };
 		5AB6AB2E29CF3C2700ADC37C /* StudentListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListTableViewCell.swift; sourceTree = "<group>"; };
+		5AB6AB3329CF5C0800ADC37C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,11 +69,9 @@
 				5AB6AB2929CF397000ADC37C /* Controllers */,
 				5AB6AB1229CF359100ADC37C /* AppDelegate.swift */,
 				5AB6AB1429CF359100ADC37C /* SceneDelegate.swift */,
-				5AB6AB1829CF359100ADC37C /* Main.storyboard */,
 				5AB6AB1E29CF359900ADC37C /* Assets.xcassets */,
-				5AB6AB2029CF359900ADC37C /* LaunchScreen.storyboard */,
 				5AB6AB2329CF359900ADC37C /* Info.plist */,
-				5AB6AB1B29CF359100ADC37C /* MegabitInterview.xcdatamodeld */,
+				5AB6AB3329CF5C0800ADC37C /* Constants.swift */,
 			);
 			path = MegabitInterview;
 			sourceTree = "<group>";
@@ -81,7 +81,7 @@
 			children = (
 				5AB6AB2A29CF39B600ADC37C /* StudentFormViewController.swift */,
 				5AB6AB2C29CF39D000ADC37C /* StudentListViewController.swift */,
-				5AB6AB2E29CF3C2700ADC37C /* StudentListTableViewCell.swift */,
+				5AB6AB3229CF5AE600ADC37C /* Table View Cells */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -89,6 +89,8 @@
 		5AB6AB3029CF57E200ADC37C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5AB6AB2029CF359900ADC37C /* LaunchScreen.storyboard */,
+				5AB6AB1829CF359100ADC37C /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -96,8 +98,17 @@
 		5AB6AB3129CF57EE00ADC37C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5A52BD9629CF633000B27503 /* Student.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5AB6AB3229CF5AE600ADC37C /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5AB6AB2E29CF3C2700ADC37C /* StudentListTableViewCell.swift */,
+			);
+			path = "Table View Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,8 +186,9 @@
 				5AB6AB2B29CF39B600ADC37C /* StudentFormViewController.swift in Sources */,
 				5AB6AB1529CF359100ADC37C /* SceneDelegate.swift in Sources */,
 				5AB6AB2F29CF3C2700ADC37C /* StudentListTableViewCell.swift in Sources */,
+				5AB6AB3429CF5C0800ADC37C /* Constants.swift in Sources */,
 				5AB6AB2D29CF39D000ADC37C /* StudentListViewController.swift in Sources */,
-				5AB6AB1D29CF359100ADC37C /* MegabitInterview.xcdatamodeld in Sources */,
+				5A52BD9729CF633000B27503 /* Student.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,19 +406,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		5AB6AB1B29CF359100ADC37C /* MegabitInterview.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				5AB6AB1C29CF359100ADC37C /* MegabitInterview.xcdatamodel */,
-			);
-			currentVersion = 5AB6AB1C29CF359100ADC37C /* MegabitInterview.xcdatamodel */;
-			path = MegabitInterview.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 5AB6AB0729CF359100ADC37C /* Project object */;
 }
