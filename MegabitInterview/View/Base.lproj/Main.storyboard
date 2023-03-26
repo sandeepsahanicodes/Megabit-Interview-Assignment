@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gLW-Nr-ybJ">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -11,13 +11,13 @@
         <!--Student Form-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Student Form" id="BYZ-38-t0r" customClass="StudentFormViewController" customModule="MegabitInterview" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Student Form" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="StudentFormViewController" customModule="MegabitInterview" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="695"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PzF-XP-3Xb">
-                                <rect key="frame" x="15" y="255" width="363" height="151"/>
+                                <rect key="frame" x="15" y="15" width="363" height="151"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j7H-bj-0LK">
                                         <rect key="frame" x="0.0" y="0.0" width="363" height="34"/>
@@ -42,12 +42,11 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVv-Yz-e4g">
-                                <rect key="frame" x="15" y="768.66666666666663" width="363" height="34.333333333333371"/>
+                                <rect key="frame" x="15" y="611.66666666666663" width="363" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Save"/>
                                 <connections>
                                     <action selector="addButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Sv-fr-i1f"/>
-                                    <segue destination="nNo-cW-8Sp" kind="show" id="xvW-3k-xRj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -55,14 +54,14 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hVv-Yz-e4g" secondAttribute="bottom" constant="15" id="G6s-KF-WwW"/>
+                            <constraint firstItem="PzF-XP-3Xb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="NDU-G7-kp0"/>
                             <constraint firstItem="hVv-Yz-e4g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Sqg-dv-cp6"/>
-                            <constraint firstItem="PzF-XP-3Xb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="T5l-ki-0nZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hVv-Yz-e4g" secondAttribute="trailing" constant="15" id="jCT-xR-b3n"/>
                             <constraint firstItem="PzF-XP-3Xb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="mJX-pp-TH6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PzF-XP-3Xb" secondAttribute="trailing" constant="15" id="wlK-p4-cse"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="fiQ-8T-FOZ"/>
+                    <navigationItem key="navigationItem" title="Student Form" largeTitleDisplayMode="always" id="fiQ-8T-FOZ"/>
                     <connections>
                         <outlet property="addButtonTapped" destination="hVv-Yz-e4g" id="rAl-mx-Sn2"/>
                         <outlet property="email" destination="qxI-se-BOP" id="NaZ-hg-OEE"/>
@@ -78,13 +77,13 @@
         <!--Student List View Controller-->
         <scene sceneID="Atg-16-cO1">
             <objects>
-                <viewController storyboardIdentifier="StudentListVC" id="nNo-cW-8Sp" customClass="StudentListViewController" customModule="MegabitInterview" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StudentListVC" modalPresentationStyle="fullScreen" id="nNo-cW-8Sp" customClass="StudentListViewController" customModule="MegabitInterview" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uLu-hX-rEv">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="A2S-9B-wFS">
-                                <rect key="frame" x="0.0" y="155" width="393" height="663"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" systemColor="labelColor"/>
                                 <prototypes>
@@ -148,22 +147,24 @@
             </objects>
             <point key="canvasLocation" x="1831" y="1"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Student Form-->
         <scene sceneID="KdL-GJ-GZH">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gLW-Nr-ybJ" sceneMemberID="viewController">
+                <navigationController title="Student Form" automaticallyAdjustsScrollViewInsets="NO" id="gLW-Nr-ybJ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" multipleTouchEnabled="YES" contentMode="scaleToFill" largeTitles="YES" id="WgR-nB-wk0">
-                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                    <navigationBar key="navigationBar" multipleTouchEnabled="YES" contentMode="scaleToFill" translucent="NO" largeTitles="YES" id="WgR-nB-wk0">
+                        <rect key="frame" x="0.0" y="59" width="393" height="98"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
                         </textAttributes>
-                        <navigationBarAppearance key="standardAppearance"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
