@@ -15,7 +15,7 @@ class StudentListViewController: UIViewController
     // Array for storing students.
     var students = [Student]()
     
-    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in:
+    let plistFilePath = FileManager.default.urls(for: .documentDirectory, in:
             .userDomainMask).first?.appending(component: "Students.plist")
     override func viewDidLoad()
     {
@@ -31,13 +31,13 @@ class StudentListViewController: UIViewController
     /// Retrive student list from plist file.
     private func getStudents()
     {
-        guard let safePath = dataFilePath else
+        guard let safeFilePath = plistFilePath else
         {
             print("Error while unwrapping data file path!")
             return
         }
         
-        guard let studentData = try? Data(contentsOf: safePath) else
+        guard let studentData = try? Data(contentsOf: safeFilePath) else
         
         {
             print("An error is thrown while fetching contents of plist file")
