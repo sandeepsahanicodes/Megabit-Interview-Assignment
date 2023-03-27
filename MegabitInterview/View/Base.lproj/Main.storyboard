@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="695"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PzF-XP-3Xb">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PzF-XP-3Xb" userLabel="Text Field Stack">
                                 <rect key="frame" x="15" y="15" width="363" height="151"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j7H-bj-0LK">
@@ -41,24 +41,38 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVv-Yz-e4g">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="D1Z-PH-LFN" userLabel="Button Stack">
                                 <rect key="frame" x="15" y="611.66666666666663" width="363" height="34.333333333333371"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Save"/>
-                                <connections>
-                                    <action selector="addButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Sv-fr-i1f"/>
-                                </connections>
-                            </button>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVv-Yz-e4g" userLabel="Save Student Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="363" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Save"/>
+                                        <connections>
+                                            <action selector="addButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Sv-fr-i1f"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Warning Label!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jN0-zr-JFG">
+                                <rect key="frame" x="15" y="563.66666666666663" width="363" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.96078431369999995" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hVv-Yz-e4g" secondAttribute="bottom" constant="15" id="G6s-KF-WwW"/>
-                            <constraint firstItem="PzF-XP-3Xb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="NDU-G7-kp0"/>
-                            <constraint firstItem="hVv-Yz-e4g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Sqg-dv-cp6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hVv-Yz-e4g" secondAttribute="trailing" constant="15" id="jCT-xR-b3n"/>
-                            <constraint firstItem="PzF-XP-3Xb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="mJX-pp-TH6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PzF-XP-3Xb" secondAttribute="trailing" constant="15" id="wlK-p4-cse"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="D1Z-PH-LFN" secondAttribute="bottom" constant="15" id="K3j-nU-wDf"/>
+                            <constraint firstItem="PzF-XP-3Xb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="PY8-Er-gT6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PzF-XP-3Xb" secondAttribute="trailing" constant="15" id="XRw-9h-4xy"/>
+                            <constraint firstItem="PzF-XP-3Xb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="cih-SH-krG"/>
+                            <constraint firstItem="D1Z-PH-LFN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="gFS-sp-8jh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D1Z-PH-LFN" secondAttribute="trailing" constant="15" id="iLP-kI-1bY"/>
+                            <constraint firstItem="jN0-zr-JFG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="mFN-o7-0ew"/>
+                            <constraint firstItem="D1Z-PH-LFN" firstAttribute="top" secondItem="jN0-zr-JFG" secondAttribute="bottom" constant="30" id="otk-Lk-70R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jN0-zr-JFG" secondAttribute="trailing" constant="15" id="ww0-le-qgl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Student Form" largeTitleDisplayMode="always" id="fiQ-8T-FOZ"/>
@@ -68,6 +82,7 @@
                         <outlet property="firstName" destination="j7H-bj-0LK" id="EJe-fv-t1A"/>
                         <outlet property="lastName" destination="ghh-X0-eRO" id="AcP-Yi-wMN"/>
                         <outlet property="mobileNumber" destination="K9L-r8-QON" id="nOu-dH-mBk"/>
+                        <outlet property="warningLabel" destination="jN0-zr-JFG" id="GR4-r5-yLT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

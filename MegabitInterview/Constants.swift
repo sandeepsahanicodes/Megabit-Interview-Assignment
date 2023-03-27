@@ -12,4 +12,6 @@ struct Constants
     static let studentListTitle = "Student's List"
     static let studentListStoryboardID = "StudentListVC"
     static let userDefaultsKey = "encodedStudent"
+    
+    static let warningMessage = "Please fill all fields!"
 }

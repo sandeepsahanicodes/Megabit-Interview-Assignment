@@ -45,6 +45,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A41A77429D1B092003BBA98 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		5AB6AB0629CF359100ADC37C = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +74,7 @@
 				5AB6AB3129CF57EE00ADC37C /* Model */,
 				5AB6AB3029CF57E200ADC37C /* View */,
 				5AB6AB2929CF397000ADC37C /* Controllers */,
+				5A41A77429D1B092003BBA98 /* Utility */,
 				5AB6AB1229CF359100ADC37C /* AppDelegate.swift */,
 				5AB6AB1429CF359100ADC37C /* SceneDelegate.swift */,
 				5AB6AB1E29CF359900ADC37C /* Assets.xcassets */,

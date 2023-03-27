@@ -11,41 +11,54 @@ class StudentListViewController: UIViewController
 {
 
     @IBOutlet weak var studentListTableView: UITableView!
-
-    let defaults = UserDefaults.standard
     
     // Array for storing students.
     var students = [Student]()
     
+    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in:
+            .userDomainMask).first?.appending(component: "Students.plist")
     override func viewDidLoad()
     {
         super.viewDidLoad()
         self.studentListTableView.delegate = self
         self.studentListTableView.dataSource = self
         navigationItem.title = Constants.studentListTitle
-    
-        decodeStudent()
+        // print(dataFilePath)
+        getStudents()
         
-        // Reloading table view after populating Student data.
-        DispatchQueue.main.async
-        {
-            self.studentListTableView.reloadData()
-        }
     }
     
-    /// Function that decodes encoded Student.
-    private func decodeStudent()
+    /// Retrive student list from plist file.
+    private func getStudents()
     {
-        let defaults = UserDefaults.standard
-        if let studentData = defaults.value(forKey: Constants.userDefaultsKey) as? Data
+        guard let safePath = dataFilePath else
         {
-            let decoder = JSONDecoder()
-            if let decodedStudent = try? decoder.decode([Student].self, from: studentData)
-            {
-                self.students = decodedStudent
-            }
+            print("Error while unwrapping data file path!")
+            return
         }
         
+        guard let studentData = try? Data(contentsOf: safePath) else
+        
+        {
+            print("An error is thrown while fetching contents of plist file")
+            return
+        }
+        
+        let decoder = PropertyListDecoder()
+        do
+        {
+            self.students = try decoder.decode([Student].self, from: studentData)
+            // Reloading table view after populating Student data.
+            DispatchQueue.main.async
+            {
+                self.studentListTableView.reloadData()
+            }
+        }
+        catch
+        {
+            print("Error decoding data \(error)")
+        }
+       
     }
     
 }
@@ -69,6 +82,5 @@ extension StudentListViewController: UITableViewDelegate,UITableViewDataSource
         
         return cell
     }
-    
     
 }
