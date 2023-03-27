@@ -14,12 +14,15 @@
 </div>
 
 ## App In Action
-https://user-images.githubusercontent.com/82876741/227765660-38d3c615-4b86-4851-9bf3-00779f1c3657.mp4
+
+https://user-images.githubusercontent.com/82876741/227935634-1789bc8d-ab0d-4634-90f8-cfea09a22d85.mp4
 
 ## Technologies Used:
 - Swift
 - UITableView(Custom Cell)
 - UINavigationController
 - UIButton
-- UserDefaults
+- File Manager
+- Property List Encoder
+- Property List Decoder
 
